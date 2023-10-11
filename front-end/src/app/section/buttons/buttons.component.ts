@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-buttons',
@@ -7,13 +7,14 @@ import { Component } from '@angular/core';
 })
 export class ButtonsComponent {
 
-  @Output()
+  @Output() clickEvent = new EventEmitter();
 
   constructor() {
 
   }
 
-  start($event:MouseEvent){
+  executeButton(command: any){
+    this.clickEvent.emit(command); //부모 컴포넌트한테 데이터를 전달해줌
 
   
   }
