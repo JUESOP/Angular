@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class SectionComponent {
 
-  present = 'welcome!';
+  // present = 'welcome!';
 
-  startTime($event: string){
-    this.present = $event;
-  }
+  // startTime($event: string){
+  //   this.present = $event;
+  // }
 
 }
